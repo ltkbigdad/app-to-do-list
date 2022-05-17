@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
-import SignupImage from "../../assets/sapiens1.svg";
+import LoginImage from "../../assets/sapiens.svg";
 
 export const Container = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Background = styled.div`
   @media (min-width: 1100px) {
     flex: 1;
-    background: url(${SignupImage}) no-repeat center, var(--black);
+    background: url(${LoginImage}) no-repeat center, var(--black);
     background-size: contain;
   }
 `;
@@ -25,10 +25,10 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
-const appearFormRigth = keyframes`
+const appearFormLeft = keyframes`
 from{
     opacity: 1;
-    transform: translateX(50px)
+    transform: translateX(-50px)
 }
 
 to{
@@ -42,7 +42,7 @@ export const AnimationContainer = styled.div`
  flex-direction: column;
  align-items: center;
  justify-content: center;
- animation: ${appearFormRigth} 1s;
+ animation: ${appearFormLeft} 1s;
 
  form{
      margin: 80px 0;
