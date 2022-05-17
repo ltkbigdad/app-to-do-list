@@ -9,7 +9,7 @@ import Card from "../../components/Card";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 
-function Dashboard({ authenticated }) {
+function Dashboard({ authenticated, date }) {
   const [tasks, setTasks] = useState([]);
   const [token] = useState(
     JSON.parse(localStorage.getItem("@Doit:token")) || ""
@@ -85,8 +85,9 @@ function Dashboard({ authenticated }) {
   }
   return (
     <Container>
+      <h1>To do list</h1>
       <InputContainer onSubmit={handleSubmit(onSubmit)}>
-        <time>7 de Maio de 2021</time>
+        <time> {date} </time>
         <section>
           <Input
             icon={FiEdit2}
